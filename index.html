@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>4127 楷模第八屆交接｜溪頭米堤大飯店企業活動行程表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #145b74;
+      --primary-light: #e3f2f7;
+      --accent: #f4a261;
+      --bg: #f7f7f7;
+      --text-main: #222;
+      --text-sub: #555;
+      --card-radius: 16px;
+      --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+        "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #145b74, #1f7a8c);
+      color: #fff;
+      border-radius: 24px;
+      padding: 24px 20px 28px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      bottom: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .header-main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 4px 0 8px;
+      font-size: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.92;
+      margin-bottom: 12px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .meta-label {
+      opacity: 0.85;
+    }
+
+    /* 日期切換按鈕列 */
+    .date-switch {
+      margin: 14px auto 0;
+      max-width: 960px;
+      padding: 10px 4px 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .date-button {
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s ease;
+    }
+
+    .date-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .date-button.active {
+      background: #fff;
+      color: var(--primary);
+      border-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      font-weight: 600;
+    }
+
+    main {
+      margin-top: 20px;
+    }
+
+    .section-card {
+      background: #fff;
+      border-radius: var(--card-radius);
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span.badge {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+    }
+
+    .timeline {
+      margin-top: 8px;
+      position: relative;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .time {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .time-small {
+      font-size: 13px;
+      color: var(--text-sub);
+      font-weight: 400;
+    }
+
+    .timeline-content-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .timeline-content-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .location-block {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--text-sub);
+      padding: 6px 8px;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+
+    .location-block strong {
+      font-weight: 600;
+    }
+
+    .location-line {
+      margin-top: 2px;
+    }
+
+    .location-line a {
+      font-size: 12px;
+    }
+
+    .meal-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .meal-tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .stay-info {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--text-sub);
+    }
+
+    .info-block {
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .info-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-title {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--primary);
+    }
+
+    .info-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .info-list li {
+      margin-bottom: 3px;
+    }
+
+    .contact-card {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-top: 6px;
+    }
+
+    .contact-row {
+      margin-bottom: 4px;
+    }
+
+    .contact-row strong {
+      display: inline-block;
+      min-width: 3em;
+    }
+
+    footer {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 11px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="header-main">
+        <div class="tag">
+          <span class="tag-dot"></span>
+          <span>企業活動・二天一夜</span>
+        </div>
+        <h1>4127 楷模第八屆交接｜溪頭米堤大飯店企業活動行程表</h1>
+        <div class="subtitle">
+          台中高鐵站集合出發，下坪自然教育園區、溪頭自然教育園區、孟宗竹林古戰場、鹿谷圍爐煮茶，享受森林浴與茶文化的二天一夜輕旅行。
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-label">日期</span>
+            <span>12/5（五）– 12/6（六）</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">集合地點</span>
+            <span>高鐵台中站 09:00</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">住宿</span>
+            <span>溪頭米堤大飯店</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 日期切換按鈕 -->
+      <div class="date-switch">
+        <button class="date-button active" data-day="day1">12/5（五）行程</button>
+        <button class="date-button" data-day="day2">12/6（六）行程</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Day 1 -->
+      <section class="section-card day-section" data-day="day1">
+        <h2 class="section-title">
+          Day 1｜12/5（五）
+          <span class="badge">台中高鐵站 → 溪頭</span>
+        </h2>
+        <p class="section-sub">
+          行程：高鐵台中站 09:00 集合出發 → 下坪自然教育園區 → 蝶舞花間無菜單料理 → 溪頭自然教育園區森林浴 → 溪頭米堤大飯店入住與晚宴。
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">09:00</div>
+            <div>
+              <div class="timeline-content-title">高鐵台中站集合出發</div>
+              <div class="timeline-content-desc">
+                集合於高鐵台中站，請準時報到。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>高鐵台中站</div>
+                <div class="location-line">地址：台中市烏日區站區二路 8 號</div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%90%B5%E5%8F%B0%E4%B8%AD%E7%AB%99" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">09:40–10:40</div>
+            <div>
+              <div class="timeline-content-title">下坪自然教育園區</div>
+              <div class="timeline-content-desc">
+                專業導覽認識生態植物，近距離觀賞竹山自然之美。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>下坪自然教育園區</div>
+                <div class="location-line">地址：南投縣竹山鎮枋坪巷 21-8 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492645762">049-264-5762</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%8B%E5%9D%AA%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E5%9C%92%E5%8D%80" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">11:00–13:00</div>
+            <div>
+              <div class="timeline-content-title">午餐｜蝶舞花間</div>
+              <div class="timeline-content-desc">
+                預約制私廚無菜單料理，體驗台灣食材創意料理（包場）。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>蝶舞花間 無菜單料理餐廳</div>
+                <div class="location-line">地址：南投縣竹山鎮田子里田東路 48-8 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0905669121">0905-669-121</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E8%9D%B6%E8%88%9E%E8%8A%B1%E9%96%93%20%E5%8D%97%E6%8A%95" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">13:30–16:00</div>
+            <div>
+              <div class="timeline-content-title">溪頭自然教育園區｜森林浴</div>
+              <div class="timeline-content-desc">
+                溪頭遊覽，專業導覽解說，享受森林浴，漫步步道、吸收芬多精。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>溪頭自然教育園區（溪頭森林遊樂區）</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村森林巷 9 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492612210">049-261-2210</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E6%BA%AA%E9%A0%AD%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E5%9C%92%E5%8D%80" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">17:00</div>
+            <div>
+              <div class="timeline-content-title">入住｜溪頭米堤大飯店</div>
+              <div class="timeline-content-desc">
+                無與倫比的人文美景飯店，設施包含：泳池、三溫暖、健身房、KTV、星空觀景台等，可自由使用。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>溪頭米堤大飯店</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村米堤街 1 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492612222">049-261-2222</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E6%BA%AA%E9%A0%AD%E7%B1%B3%E5%A0%A4%E5%A4%A7%E9%A3%AF%E5%BA%97" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">18:30</div>
+            <div>
+              <div class="timeline-content-title">晚餐｜飯店中式合菜享宴</div>
+              <div class="timeline-content-desc">
+                於飯店內包廂享用中式合菜晚宴，最晚需於 21:00 全數離席。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>溪頭米堤大飯店 餐廳</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村米堤街 1 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492612222">049-261-2222</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E6%BA%AA%E9%A0%AD%E7%B1%B3%E5%A0%A4%E5%A4%A7%E9%A3%AF%E5%BA%97" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meal-row">
+          <div class="meal-tag">早餐：自理</div>
+          <div class="meal-tag">午餐：蝶舞花間（預約制私廚無菜單料理・包場）</div>
+          <div class="meal-tag">晚餐：飯店內用合菜（包廂）</div>
+        </div>
+        <div class="stay-info">
+          住宿：溪頭米堤大飯店（經典雙人客房）或同級。
+        </div>
+      </section>
+
+      <!-- Day 2 -->
+      <section class="section-card day-section" data-day="day2" style="display:none;">
+        <h2 class="section-title">
+          Day 2｜12/6（六）
+          <span class="badge">溪頭 → 鹿谷 → 台中高鐵站</span>
+        </h2>
+        <p class="section-sub">
+          行程：飯店早餐與自由活動 → 辦理退房 → 孟宗竹林古戰場、長源圳生態步道 → 紫林莊百年辦桌菜 → 鹿谷圍爐煮茶茶文化體驗 → 返回高鐵台中站。
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">07:00–09:30</div>
+            <div>
+              <div class="timeline-content-title">飯店早餐・自由活動</div>
+              <div class="timeline-content-desc">
+                於飯店享用早餐，可自由安排 SPA、散步或拍照留念，享受早晨森林氛圍。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>溪頭米堤大飯店</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村米堤街 1 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492612222">049-261-2222</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E6%BA%AA%E9%A0%AD%E7%B1%B3%E5%A0%A4%E5%A4%A7%E9%A3%AF%E5%BA%97" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">11:00</div>
+            <div>
+              <div class="timeline-content-title">辦理退房</div>
+              <div class="timeline-content-desc">
+                整理行李並完成退房手續，準備離開飯店前往健行景點。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>溪頭米堤大飯店</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村米堤街 1 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492612222">049-261-2222</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">11:00–12:00</div>
+            <div>
+              <div class="timeline-content-title">孟宗竹林古戰場 & 長源圳生態步道</div>
+              <div class="timeline-content-desc">
+                孟宗竹林古戰場與長源訓練林健行，探索林爽文古戰場，盡享自然森林景致。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>孟宗竹林古戰場／長源圳生態步道（鹿谷鄉一帶）</div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E5%AD%9F%E5%AE%97%E7%AB%B9%E6%9E%97%E5%8F%A4%E6%88%B0%E5%A0%B4" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">12:00–13:30</div>
+            <div>
+              <div class="timeline-content-title">午餐｜紫林莊辦桌菜</div>
+              <div class="timeline-content-desc">
+                於紫林莊享用竹山百年辦桌菜，在地傳統佳餚一次品嚐。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>紫林莊 原木特色餐廳</div>
+                <div class="location-line">地址：南投縣鹿谷鄉內湖村興產路 74-20 號</div>
+                <div class="location-line">
+                  電話：<a href="tel:0492755755">049-275-5755</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E7%B4%AB%E6%9E%97%E8%8E%8A%20%E5%8D%97%E6%8A%95" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">14:00–16:00</div>
+            <div>
+              <div class="timeline-content-title">南投鹿谷圍爐煮茶｜茶文化體驗</div>
+              <div class="timeline-content-desc">
+                於二樓包場空間進行茶文化體驗，由老師講解茶道與沖煮方式，每人一份茶葉與點心，圍爐煮茶、品飲交流。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>鹿谷 圍爐煮茶</div>
+                <div class="location-line">地址：南投縣鹿谷鄉鳳園路 85 號（實際依店家通知為準）</div>
+                <div class="location-line">
+                  電話：<a href="tel:0935753516">0935-753-516</a>
+                </div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E5%9C%8D%E7%88%90%E7%85%AE%E8%8C%B6%20%E9%B9%BF%E8%B0%B7" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">
+              17:30
+              <div class="time-small">（建議預定 17:30 後車次）</div>
+            </div>
+            <div>
+              <div class="timeline-content-title">返回｜高鐵台中站</div>
+              <div class="timeline-content-desc">
+                抵達高鐵台中站，結束二天愉快的旅行，建議貴賓預訂 17:30 後出發之高鐵車次返程。
+              </div>
+              <div class="location-block">
+                <div><strong>地點：</strong>高鐵台中站</div>
+                <div class="location-line">地址：台中市烏日區站區二路 8 號</div>
+                <div class="location-line">
+                  地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%90%B5%E5%8F%B0%E4%B8%AD%E7%AB%99" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meal-row">
+          <div class="meal-tag">早餐：飯店內用</div>
+          <div class="meal-tag">午餐：紫林莊享用竹山百年辦桌菜</div>
+          <div class="meal-tag">晚餐：X（自行安排）</div>
+        </div>
+        <div class="stay-info">
+          住宿：溫暖的家。
+        </div>
+
+        <hr style="border: none; border-top: 1px dashed #ddd; margin: 16px 0 10px;" />
+
+        <div class="info-block">
+          <div class="info-title">行前必讀</div>
+          <ul class="info-list">
+            <li>請準時於 09:00 抵達高鐵台中站集合，以免影響整體行程。</li>
+            <li>建議攜帶：保暖衣物、輕便雨具、防滑好走的鞋子、個人常備藥品。</li>
+            <li>健行與森林步道路段，請評估自身體力，量力而為，並隨時注意自身安全。</li>
+            <li>飯店設施如泳池、三溫暖等，請遵守場館規範與開放時間。</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <div class="info-title">旅行社與聯絡資訊</div>
+          <div class="contact-card">
+            <div class="contact-row">
+              <strong>公司</strong>可樂旅遊旅行社（股）公司 新店分公司（可樂旅遊）
+            </div>
+            <div class="contact-row">
+              <strong>地址</strong>新北市新店區北新路二段 198 號 1 樓
+            </div>
+            <div class="contact-row">
+              <strong>承辦</strong>張敬仁 先生｜電話：<a href="tel:0286650608">(02) 8665-0608</a>｜手機：<a href="tel:0916581513">0916-581-513</a>
+            </div>
+            <div class="contact-row">
+              <strong>承辦</strong>徐進哲 先生｜電話：<a href="tel:0286650608">(02) 8665-0608</a>｜手機：<a href="tel:0952006130">0952-006-130</a>
+            </div>
+            <div class="location-line" style="margin-top:6px;">
+              地圖：<a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E5%BA%97%E5%8D%80%E5%8C%97%E6%96%B0%E8%B7%AF%E4%BA%8C%E6%AE%B5198%E8%99%9F" target="_blank" rel="noopener noreferrer">可樂旅遊新店分公司（Google 地圖）</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      本頁為「4127 楷模第八屆交接｜溪頭米堤大飯店企業活動行程表」一頁式網頁版本，可直接用於 GitHub Pages 或列印參考。
+    </footer>
+  </div>
+
+  <script>
+    // 日期切換邏輯
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".date-button");
+      const sections = document.querySelectorAll(".day-section");
+
+      function showDay(dayKey) {
+        sections.forEach((sec) => {
+          sec.style.display = sec.dataset.day === dayKey ? "block" : "none";
+        });
+        buttons.forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.day === dayKey);
+        });
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const dayKey = btn.dataset.day;
+          showDay(dayKey);
+        });
+      });
+
+      // 預設顯示 Day 1
+      showDay("day1");
+    });
+  </script>
+</body>
+</html>
